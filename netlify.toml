@@ -1,0 +1,21 @@
+[build]
+  # The directory that contains your output files.
+  publish = "dist"
+
+  # The build command to run to generate your output files.
+  command = "npm run build"
+
+  # Environment for the build process
+  environment = { NODE_VERSION = "16.x" }
+
+[dev]
+  # The port that your dev server runs on
+  port = 3000
+
+[build.environment]
+  NODE_ENV = "production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
